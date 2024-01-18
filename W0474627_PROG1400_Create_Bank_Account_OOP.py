@@ -40,3 +40,6 @@ account1.deposit(1000)
 
 # Withdraw an amount
 account1.withdraw(200)
+
+# Display the balance
+account1.display_balance()
