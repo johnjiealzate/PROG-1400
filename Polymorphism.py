@@ -23,9 +23,6 @@ class Apple(Fruit):
         generic_taste = super().taste() # Calling the supeclass method
         return f"{generic_taste} and Crispy"
     
-def describe_taste(Fruit):
-    print (f"{Fruit.name} taste: {Fruit.taste()}")
-
 class Orange(Fruit):
     def __init__(self, name, size):
         super().__init__(name)
@@ -33,7 +30,10 @@ class Orange(Fruit):
     
     def taste(self):
         generic_taste = super().taste() # Calling the supeclass method
-        return f"{generic_taste} and Sour"
+        return f"{generic_taste} and Juicy"
+
+def describe_taste(Fruit):
+    print (f"{Fruit.name} taste: {Fruit.taste()}")
 
 # Create instances of Apple and Orange
 apple = Apple("Red Apple", "Red")
