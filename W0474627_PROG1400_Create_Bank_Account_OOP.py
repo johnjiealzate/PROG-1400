@@ -4,39 +4,39 @@ ID No.: W0474627
 Program: IT Generalist
 Course: PROG1400
 """
-# Create function: create a bank account by crreating a dictionary
-def create_account(owner, balance=0):
-    return{"owner": owner, "balance": balance}
 
-# Create function: deposit
-def deposit(account, amount):
-    account["balance"] += amount
-    print(f"Deposited ${amount}. New balance: ${account['balance']}")
+# Class definition
+class BankAccount:
+    # Constructor (initialization method: __init__method)
+    # Initialize the attributes of the class (variables of the the class BankAccount)
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
 
-# Create a function: withdrawal
-def withdraw(account, amount):
-    if amount <= account["balance"]:
-        account["balance"] -= amount
-        print(f"Withdrew ${amount}. New balance: ${account['balance']}")
-    else:
-        print(f"Insufficient funds")
+    # Define the method for  deposit
+    def deposit(self, amount):
+        self.balance += amount
+        print(f"Deposited ${amount}. New balance: ${self.balance}")
 
-# Creatre a funciton: display balance
-def display_balance (account):
-    print(f"Account owner: {account['owner']}, Balance: S{account['balance']}")
+    # Define the method for withdraw
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            print(f"Withdrew ${amount}. New balance: ${self.balance}")
+        else:
+            print(f"Insufficient funds")
 
-# main
-account1 = create_account("Davis")
-print(account1)
-print(f"Account: {account1}")
+    # Define the method for display balance
+    def display_balance (self):
+        print(f"Account owner: {self.owner}, Balance: S{self.balance}")
+
+account1 = BankAccount ("Johnjie")
 
 # Display the balance
-display_balance(account1)
+account1.display_balance()
 
 # Deposit an amount
-deposit(account1, 1000)
+account1.deposit(1000)
 
 # Withdraw an amount
-withdraw(account1, 500)
-
-print(type(account1))
+account1.withdraw(200)
