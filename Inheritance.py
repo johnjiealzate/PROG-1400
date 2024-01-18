@@ -27,3 +27,4 @@ cat = Cat("Whisker", "domestic")
 # Using methods
 print(dog.speak())
 print(cat.speak())
+
