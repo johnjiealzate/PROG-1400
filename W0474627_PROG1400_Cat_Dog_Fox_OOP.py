@@ -33,9 +33,9 @@ def animal_sound(animal):
 animals = [dog, cat]
  
 for animal in animals:
-    print(animal_sound(animals))
+    print(animal_sound(animal))
  
 # Using methods
-#print(dog.speak())
-#print(cat.speak())
-#print(fox.speak())
+print(dog.speak())
+print(cat.speak())
+print(fox.speak())
