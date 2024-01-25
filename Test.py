@@ -11,10 +11,10 @@ class Dog(Animal):
     def speak(self):
         return f"{self.name} says Woof!"
     
-class CAt(Animal):
+class Cat(Animal):
     def speak(self):
         return f"{self.name} says Meow!"
     
 # Creating Objects
 dog = Dog("Buddy")
-cat = Cat("")
+cat = Cat("Whisker")
