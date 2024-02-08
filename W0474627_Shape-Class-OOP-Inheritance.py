@@ -10,6 +10,9 @@ class Shape:
     def calculate_volume(self):
         pass
 
+    def __str__(self):
+        return self.__class__.__name__
+
 # Create the child class Rectangle
 class Rectangle(Shape):
     # Initialize the object attributes
@@ -71,5 +74,3 @@ cylinder = Circle(radius=5, height=5)
 print_area(cuboid)
 print_perimeter(cuboid)
 print_volume(cuboid)
-
-
