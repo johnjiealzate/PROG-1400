@@ -21,14 +21,14 @@ class Driver(Person):
         self.v_color = v_color
         
     def details(self):
-        return f"{super().details()}, Vehicle: {self.v_color} {self.v_make} {self.v_model} {self.v_type}"
+        return f"Driver {super().details()}, Vehicle: {self.v_color} {self.v_make} {self.v_model} {self.v_type}"
     
 class Rider(Person):
     def __init__(self, first_name, last_name, mobile, email):
         super().__init__(first_name, last_name, mobile, email)
     
     def details(self):
-        return f"{super().details()}"
+        return f"Rider {super().details()}"
 
 # Abstraction: Users interact with the classes through their interfcaes (details() method),    
 # hiding the complexities of their implementations.
@@ -40,7 +40,7 @@ class Route:
         self.destination = destination
         
     def details(self):
-        return f"Origin: {self.origin}, Midway Stop: {self.midway_stop}, Destination: {self.destination}"
+        return f"Trip Origin: {self.origin}, Midway Stop: {self.midway_stop}, Destination: {self.destination}"
 
 # Polymorphism: The details() method is polymorphic - it behaves differently based on the object calling it.    
 
@@ -52,7 +52,7 @@ class Trip(Route):
         self.arrival_time = arrival_time
         
     def details(self):
-        return f"{super().details()}, Leaving Time: {self.leaving_time}, Stop Time: {self.stop_time}, Arrival Time: {self.arrival_time}"
+        return f"Trip Details: {super().details()}, Leaving Time: {self.leaving_time}, Stop Time: {self.stop_time}, Arrival Time: {self.arrival_time}"
     
 def run():
     # Create instances of the classes.
@@ -64,6 +64,7 @@ def run():
     
     # Iterate over the entities and print the details
     for i in journey1:
+        print("\n")
         print(i.details())
     
  # The __name__ variable is a specia variable that holds the name of the current
