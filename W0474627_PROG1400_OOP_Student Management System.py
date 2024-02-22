@@ -22,7 +22,7 @@ class StudentManagementSystem:
      
     def search_student_by_id(self, student_id):
         print ("Search student:")
-        for s in self.students:
+        for student in self.students:
             if student.student_id == student_id:
                 print ("Student found")
                 student.display_info()
