@@ -16,12 +16,15 @@ class SraduateStudent(Student):
         super().__init__(student_id, name, age, grade)
         self.thesis_topic = thesis_topic
 
-
-def search_student_by_id(self, student_id):
-     print ("Search student:")
-    for s in self.students:
-        if student.student_id == student_id:
-            print ("Student found")
-            student.display_info()
-            return
-        print("Student not found")
+class StudentManagementSystem:
+    def __init__(self):
+          self.students = []
+     
+    def search_student_by_id(self, student_id):
+        print ("Search student:")
+        for s in self.students:
+            if student.student_id == student_id:
+                print ("Student found")
+                student.display_info()
+                return
+            print("Student not found")
