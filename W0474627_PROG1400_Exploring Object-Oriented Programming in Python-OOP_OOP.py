@@ -8,7 +8,7 @@ class Shape:
     def __str__(self):
         return self.__class__.__name__
 
- # Create two subclasses, `Rectangle` and `Circle`, inheriting from `Shape`.
+# Create two subclasses, `Rectangle` and `Circle`, inheriting from `Shape`.
 class Rectangle(Shape):
     def __init__(self, length, width):
         self.length = length
@@ -24,13 +24,12 @@ class Circle(Shape):
     
     # Implement the `area()` method for `Circle` classes.
     def calculate_area(self):
-        return 3.14 * self.radius * self.radius
+        return 3.14 * self.radius**2
     
 # Instantiate objects of both `Rectangle` and `Circle` classes and demonstrate the calculation of their areas.
 def print_area(shape):
     print(f"Area of the {shape} is {shape.calculate_area()}")
 
-# Create an object
 rectangle = Rectangle(length=10, width=10)
 circle = Circle(radius=5)
 
@@ -75,25 +74,37 @@ class Animal:
 class Dog(Animal):
     def speak(self):
         return f"{self.name} says Woof!"
+    
+    def move(self):
+        return f"{self.name} walks"
  
 class Cat(Animal):
     def speak(self):
         return f"{self.name} says Meow!"
+    
+    def move(self):
+        return f"{self.name} walks"
  
 class Bird(Animal):
     def speak(self):
         return f"{self.name} says Tweet!"
+    
+    def move(self):
+        return f"{self.name} flies"
    
-# Creating objects
+# Instantiate objects of each subclass and demonstrate their unique behaviors.
 dog = Dog("Buddy")
 cat = Cat("Whiskers")
 bird = Bird("Tweety")
  
-# Instantiate objects of each subclass and demonstrate their unique behaviors.
 print(dog.speak())
 print(cat.speak())
 print(bird.speak())
+print("\n")
 
+print(dog.move())
+print(cat.move())
+print(bird.move())
 print("\n")
 
 # Task 4: Polymorphism
@@ -122,13 +133,11 @@ class Bicycle(Vehicle):
         # Override the `travel()` method for each subclass to reflect how they travel.
         return f"{self.name} travels by land."
 
- # Create objects
+# Instantiate objects of each subclass and demonstrate polymorphic behavior by calling the `travel()` method.
 car = Car("Toyota Prius")
 plane = Plane("Air Canada")
 bicycle = Bicycle("Cannondale Bike")
 
-    
-# Instantiate objects of each subclass and demonstrate polymorphic behavior by calling the `travel()` method.
 def travel(vehicle):
     return vehicle.travel_method()
  
