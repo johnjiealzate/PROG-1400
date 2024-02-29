@@ -40,21 +40,36 @@ print("\n")
 # Task 2: Abstraction
 # Define a class called `Student` with the following attributes.
 class Student:
-    def __init__(self, name, age, grade):
-        self.name = name
-        self.age = age
-        self.grade = grade
+    def __init__(self):
+        self.__name = ""
+        self.__age = 0
+        self.__grade = ""
 
     # Implement methods to set and get these details.
-    def display_info(self):
-        print (f"Student Information: Name: {self.name}, Age: {self.age}, Grade: {self.grade}")
-    
-# Create an object
-student1 = Student("Johnjie", 25, 9)
+    def display_info(self, name, age, grade):
+        self.__name = name
+        self.__age = age
+        self.__grade = grade
 
-# Display the information
-student1.display_info()
-print("\n")
+    def input_name(self):
+        return self.__name
+    
+    def input_age(self):
+        return self.__age
+    
+    def input_grade(self):
+        return self.__grade
+    
+# Demonstrate the use of these methods by creating instances of the `Student` class and manipulating their details.
+student1 = Student()
+name = input("What is your name?")
+age = input("What is your age?")
+grade = input("What is your grade?")
+
+student1.display_info(name, age, grade)
+print("Student Name:", student1.input_name())
+print("Student Age:", student1.input_age())
+print("Student Grade:", student1.input_age())
 
 # Task 3: Inheritance
 # Define a base class named `Animal`.
