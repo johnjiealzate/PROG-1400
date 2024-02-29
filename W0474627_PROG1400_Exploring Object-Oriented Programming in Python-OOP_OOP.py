@@ -1,24 +1,38 @@
 # Task 1: Abstraction
 # Define a class named `Shape`.
-from typing import Any
-
-
 class Shape:
-    def __init__(self):
-        pass
-
     # Implement an abstract method `area()` within the `Shape` class.
-    def calculate_area():
-        return
+    def calculate_area(self):
+        return 
 
  # Create two subclasses, `Rectangle` and `Circle`, inheriting from `Shape`.
 class Rectangle(Shape):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+    
+    # Implement the `area()` method for `Rectangle` classes.
+    def calculate_area(self):
+        return self.length * self.width
 
 class Circle(Shape):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, radius):
+        self.radius = radius
+    
+    # Implement the `area()` method for `Circle` classes.
+    def calculate_area(self):
+        return 3.14 * self.radius * self.radius
+    
+# Instantiate objects of both `Rectangle` and `Circle` classes and demonstrate the calculation of their areas.
+def print_area(shape):
+    print(f"Area of the {shape} is {shape.calculate_area()}")
+
+# Create an object
+rectangle = Rectangle(length=10, width=10)
+circle = Circle(radius=5)
+
+print_area(rectangle)
+print_area(circle)
 
 # Task 3: Inheritance
 # Define a base class named `Animal`.
