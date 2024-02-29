@@ -9,7 +9,7 @@ class Player:
     def choose_move(self):
         pass
 
-# Step 2: Createaa derived class (human player) that imherits from the base class (Player)
+# Step 2: Create derived class (human player) that imherits from the base class (Player)
 class HumanPlayer(Player):
     def choose_move(self):
         move  = input(f"{self.name} Please eneter  you move (rock, paper, scisssor):").lower()
@@ -18,7 +18,7 @@ class HumanPlayer(Player):
             move  = input(f"{self.name} Please enter  you move (rock, paper, scisssor):").lower()
         return move
     
-# Step 3: Cfreate annother derived class (ComputerPlayer) that also inherits from the base class (Playear)
+# Step 3: Create another derived class (ComputerPlayer) that also inherits from the base class (Playear)
 class ComputerPlayear(Player):
     def choose_move(self):
         return random.choice(option_list)

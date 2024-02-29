@@ -28,3 +28,6 @@ class StudentManagementSystem:
                 student.display_info()
                 return
             print("Student not found")
+
+# Methods
+# 
