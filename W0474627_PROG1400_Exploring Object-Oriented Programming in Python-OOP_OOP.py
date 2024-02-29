@@ -4,6 +4,9 @@ class Shape:
     # Implement an abstract method `area()` within the `Shape` class.
     def calculate_area(self):
         return 
+    
+    def __str__(self):
+        return self.__class__.__name__
 
  # Create two subclasses, `Rectangle` and `Circle`, inheriting from `Shape`.
 class Rectangle(Shape):
@@ -33,6 +36,26 @@ circle = Circle(radius=5)
 
 print_area(rectangle)
 print_area(circle)
+print("\n")    
+
+# Task 2: Abstraction
+# Define a class called `Student` with the following attributes.
+class Student:
+    def __init__(self, name, age, grade):
+        self.name = name
+        self.age = age
+        self.grade = grade
+
+    # Implement methods to set and get these details.
+    def display_info(self):
+        print (f"Student Information: Name: {self.name}, Age: {self.age}, Grade: {self.grade}")
+    
+# Create an object
+student1 = Student("Johnjie", 25, 9)
+
+# Display the information
+student1.display_info()
+print("\n")
 
 # Task 3: Inheritance
 # Define a base class named `Animal`.
