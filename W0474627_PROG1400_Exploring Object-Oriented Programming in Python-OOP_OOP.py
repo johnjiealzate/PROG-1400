@@ -76,21 +76,21 @@ class Dog(Animal):
         return f"{self.name} says Woof!"
     
     def move(self):
-        return f"{self.name} walks"
+        return f"{self.name} the dog walks."
  
 class Cat(Animal):
     def speak(self):
         return f"{self.name} says Meow!"
     
     def move(self):
-        return f"{self.name} walks"
+        return f"{self.name} the cat walks."
  
 class Bird(Animal):
     def speak(self):
         return f"{self.name} says Tweet!"
     
     def move(self):
-        return f"{self.name} flies"
+        return f"{self.name} the bird flies."
    
 # Instantiate objects of each subclass and demonstrate their unique behaviors.
 dog = Dog("Buddy")
