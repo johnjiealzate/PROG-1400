@@ -18,7 +18,7 @@ if city_weather:
         print("Weather in: ", city_name)
         # Print("At time", datetime(city_weather['dt]))
         print("Description: ", city_weather['weather'][0]['description'])
-        print("Temperature: ", round(KELVIN - city_weather['main']['temp']), "°C")
+        print("Temperature: ", round(city_weather['main']['temp'] - KELVIN), "°C")
     else:
         print(f"Error COde: {city_weather['cod']}")
         print(f"Error Message: {city_weather['message'].capitalize()}")
