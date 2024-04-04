@@ -66,7 +66,6 @@ class StudentManagementSystem:
         self.add_student(new_student)
         print("New student added successfully.")
 
-
 # Main script
 if __name__ == "__main__":
     # Create a StudentManagementSystem object
