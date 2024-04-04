@@ -8,10 +8,7 @@ class Student:
 
     # Method to display student information (`display_info()`).
     def display_info(self):
-        print(f"Student ID: {self.student_id}")
-        print(f"Name: {self.name}")
-        print(f"Age: {self.age}")
-        print(f"Grade: {self.grade}")
+        print(f"Student ID: {self.student_id} Name: {self.name} Age: {self.age} Grade: {self.grade}")
 
     # Method to update the student's grade (`update_grade()`). 
     def update_grade(self, new_grade):
@@ -76,8 +73,8 @@ if __name__ == "__main__":
     student_mgmt_sys = StudentManagementSystem()
 
     # Add students
-    student1 = Student(1, "Alice", 20, 85.5)
-    student2 = GraduateStudent(2, "Bob", 25, 90.0, "Machine Learning")
+    student1 = Student(1, "John", 21, 95.5)
+    student2 = GraduateStudent(2, "Jane", 24, 88.6, "Augmented Reality")
     student_mgmt_sys.add_student(student1)
     student_mgmt_sys.add_student(student2)
 
