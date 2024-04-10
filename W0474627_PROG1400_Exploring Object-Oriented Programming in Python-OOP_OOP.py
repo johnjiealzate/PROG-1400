@@ -98,7 +98,7 @@ class Cat(Animal):
         return f"{self.name} says Meow!"
     
     def move(self):
-        return f"{self.name} the cat walks."
+        return f"{self.name} the cat jumps."
  
 class Bird(Animal):
     def speak(self):
