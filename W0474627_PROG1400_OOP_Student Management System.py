@@ -81,7 +81,7 @@ if __name__ == "__main__":
     student_mgmt_sys.add_student(student3)
     student_mgmt_sys.add_student(student4)
 
-    # Display all students
+    # Display information of all students
     print("All Students:")
     student_mgmt_sys.display_all_students()
     print()

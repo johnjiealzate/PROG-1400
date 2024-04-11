@@ -70,6 +70,7 @@ student1.display_info(name, age, grade)
 print("Student Name:", student1.input_name())
 print("Student Age:", student1.input_age())
 print("Student Grade:", student1.input_age())
+print("\n")  
 
 # Task 3: Inheritance
 # Define a base class named `Animal`.
