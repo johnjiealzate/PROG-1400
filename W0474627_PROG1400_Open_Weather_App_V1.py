@@ -1,7 +1,7 @@
-import W0474627_Open_Weather_App
+import W0474627_PROG1400_Open_Weather_App
 # Enter your API Key
 api_key = "7183f487bd1c25233fb7f02cbb25f185"
-open_map = W0474627_Open_Weather_App.OpenMapAPI(api_key)
+open_map = W0474627_PROG1400_Open_Weather_App.OpenMapAPI(api_key)
 KELVIN = 273.15
 # Prompt user for city
 city_name = input("Enter city name: ")
