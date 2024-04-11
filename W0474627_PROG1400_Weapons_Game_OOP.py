@@ -10,6 +10,7 @@ class Weapon:
         # Local variable to account for the ammo_remaining
         self.ammo_remaining = ammo_capacity
 
+    # Implement a method to simulate shooting the weapon, decrementing its ammo count
     def shoot(self):
         if self.ammo_remaining > 0:
             print (f"{self.name} fire! -{self.damage}")
@@ -24,6 +25,7 @@ class Player:
         self.health = health
         self.weapon = None
 
+    # Implement methods for taking damage and shooting the equipped weapon
     def take_damage(self, damage):
         self.health -= damage
         print (f"{self.name} took {damage}. Current health: {self.health}")
@@ -44,6 +46,7 @@ class FirstPersonShooterGame:
         self.player1 = player1
         self.player2 = player2
 
+    # Ensure proper handling of player health and ammo counts during gameplay
     def play_round(self):
         print("New round!")
         self.player1.shoot()
