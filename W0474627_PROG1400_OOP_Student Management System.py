@@ -74,8 +74,12 @@ if __name__ == "__main__":
     # Add students
     student1 = Student(1, "John", 21, 95.5)
     student2 = GraduateStudent(2, "Jane", 24, 88.6, "Augmented Reality")
+    student3 = GraduateStudent(3, "Johnjie", 22, 94.5, "Artificial Intelligence")
+    student4 = Student(4, "Cameron", 21, 89)
     student_mgmt_sys.add_student(student1)
     student_mgmt_sys.add_student(student2)
+    student_mgmt_sys.add_student(student3)
+    student_mgmt_sys.add_student(student4)
 
     # Display all students
     print("All Students:")
