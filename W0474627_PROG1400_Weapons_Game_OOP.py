@@ -1,7 +1,8 @@
 import random
 
-# Step 1: Define the Weapon class
+# Step 1: Create a class to represent weapons available in the game
 class Weapon:
+    # Include attributes for the weapon's name, damage, and ammo capacity
     def __init__(self, name, damage, ammo_capacity):
         self.name = name
         self.damage = damage
@@ -15,8 +16,9 @@ class Weapon:
         else:
             print("Out of Ammo")
 
-# Step 2: Define the Player class
+# Step 2: Define a class representing a player in the game
 class Player:
+    # Include attributes for the player's name, health, and equipped weapon.
     def __init__(self, name, health):
         self.name = name
         self.health = health
@@ -36,7 +38,7 @@ class Player:
         else:
             print (f"{self.name} has no weapon!")
 
-#Step 3: Setup the game
+#Step 3: Develop a class to manage the gameplay, including rounds of combat between players
 class FirstPersonShooterGame:
     def __init__(self, player1, player2):
         self.player1 = player1
